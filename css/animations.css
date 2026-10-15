@@ -1,0 +1,397 @@
+/* ==========================================================================
+   APEX PERFORMANCE ARENA - ANIMATION ENGINE MASTER (V2 RE-TRIGGERABLE)
+   Featuring:
+   1. Premium Page-Load Telemetry Shutter Reveal
+   2. Kinetic Text Masking Typography (Re-triggerable on scroll)
+   3. Shutter Curtain Image Reveal (Re-triggerable)
+   4. Staggered Bidirectional Re-triggering Scroll Engine (Down & Up)
+   5. Radar Sweep Light Beam & Ambient Energy Waves
+   6. Concierge Pulse & WhatsApp Live Ping
+   7. Realtime Biometric Pulse Waves & Odometer Effects
+   ========================================================================== */
+
+/* ==========================================================================
+   1. PRELOADER & TELEMETRY SHUTTER SEQUENCE
+   ========================================================================== */
+
+.preloader-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+}
+
+.preloader-shutter {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50.5%;
+    background: #07080a;
+    z-index: 1;
+    transition: transform 1.1s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.preloader-shutter-top {
+    top: 0;
+    transform-origin: top;
+    border-bottom: 1px solid rgba(204, 255, 0, 0.3);
+}
+
+.preloader-shutter-bottom {
+    bottom: 0;
+    transform-origin: bottom;
+    border-top: 1px solid rgba(204, 255, 0, 0.3);
+}
+
+/* When preloader completes */
+.preloader-overlay.loaded .preloader-shutter-top {
+    transform: translateY(-101%);
+}
+
+.preloader-overlay.loaded .preloader-shutter-bottom {
+    transform: translateY(101%);
+}
+
+.preloader-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 460px;
+    padding: 0 20px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.preloader-overlay.loaded .preloader-content {
+    opacity: 0;
+    transform: scale(0.92);
+    pointer-events: none;
+}
+
+.preloader-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--color-neon);
+    background: rgba(204, 255, 0, 0.08);
+    border: 1px solid rgba(204, 255, 0, 0.2);
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    margin-bottom: 20px;
+}
+
+.pulse-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-neon);
+    box-shadow: 0 0 10px var(--color-neon);
+    animation: livePulse 1.2s infinite;
+}
+
+.preloader-brand {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.brand-text {
+    font-family: var(--font-heading);
+    font-size: 3.4rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.brand-sub {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.35em;
+    color: var(--color-neon);
+    margin-top: 6px;
+}
+
+/* ECG Canvas / SVG */
+.preloader-ecg-container {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.ecg-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.ecg-track {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.08);
+    stroke-width: 2;
+}
+
+.ecg-pulse {
+    fill: none;
+    stroke: var(--color-neon);
+    stroke-width: 2.5;
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    animation: ecgDash 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    filter: drop-shadow(0 0 6px var(--color-neon));
+}
+
+.preloader-progress-wrap {
+    width: 100%;
+}
+
+.preloader-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.preloader-bar-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #00f2fe, #ccff00);
+    border-radius: 3px;
+    transition: width 0.15s ease-out;
+    box-shadow: 0 0 12px rgba(204, 255, 0, 0.6);
+}
+
+.preloader-status {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+}
+
+.status-msg {
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+}
+
+.status-num {
+    font-weight: 800;
+    color: var(--color-neon);
+}
+
+/* ==========================================================================
+   2. KINETIC TEXT MASKING ANIMATION (RE-TRIGGERABLE ON SCROLL UP/DOWN)
+   Letters & words emerge smoothly from behind an overflow-hidden mask
+   ========================================================================== */
+
+.text-mask-wrapper {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    line-height: 1.15;
+    padding-bottom: 4px;
+}
+
+.text-mask-item {
+    display: inline-block;
+    transform: translateY(115%);
+    opacity: 0;
+    transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.55s ease;
+    will-change: transform, opacity;
+}
+
+/* When element or its parent section is revealed */
+body:not(.loading-state) .hero-headline-overlay .text-mask-item,
+body:not(.loading-state) .hero-headline-massive .text-mask-item,
+.revealed .text-mask-item,
+.section-title.revealed .text-mask-item {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+/* Stagger delays */
+.tw-1 { transition-delay: 0.06s !important; }
+.tw-2 { transition-delay: 0.14s !important; }
+.tw-3 { transition-delay: 0.22s !important; }
+.tw-4 { transition-delay: 0.30s !important; }
+.tw-5 { transition-delay: 0.38s !important; }
+
+/* ==========================================================================
+   3. SHUTTER CURTAIN IMAGE REVEAL (RE-TRIGGERABLE)
+   ========================================================================== */
+
+.mask-reveal-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.mask-curtain {
+    position: absolute;
+    inset: 0;
+    background: #07080a;
+    z-index: 5;
+    transform-origin: right center;
+    transition: transform 1.25s cubic-bezier(0.77, 0, 0.175, 1);
+    will-change: transform;
+}
+
+.mask-curtain::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--color-neon);
+    box-shadow: 0 0 20px var(--color-neon);
+}
+
+/* When image is revealed */
+.mask-reveal-wrap.revealed .mask-curtain {
+    transform: scaleX(0);
+}
+
+.mask-reveal-wrap.revealed .reveal-target-img {
+    transform: scale(1);
+}
+
+/* When image scrolls out of view - resets so it can re-trigger when scrolling back */
+.mask-reveal-wrap:not(.revealed) .mask-curtain {
+    transform: scaleX(1);
+    transform-origin: left center;
+}
+
+.mask-reveal-wrap:not(.revealed) .reveal-target-img {
+    transform: scale(1.1);
+}
+
+/* Hover dynamic scaling */
+.mask-reveal-wrap.revealed:hover .reveal-target-img {
+    transform: scale(1.04);
+}
+
+/* ==========================================================================
+   4. SCROLL-REVEAL BIDIRECTIONAL ENGINE (ANIMATES DOWN AND UP AGAIN & AGAIN)
+   ========================================================================== */
+
+.reveal-item {
+    opacity: 0;
+    will-change: transform, opacity;
+    transition: opacity 0.75s var(--ease-agency), transform 0.75s var(--ease-agency);
+}
+
+/* Unrevealed baseline states */
+.reveal-item[data-anim="fade-up"] {
+    transform: translateY(45px);
+}
+
+.reveal-item[data-anim="card-reveal"] {
+    transform: translateY(35px) scale(0.96);
+}
+
+.reveal-item[data-anim="slide-right"] {
+    transform: translateX(-45px);
+}
+
+/* REVEALED STATE (TRIGGERED BOTH DOWN AND UP) */
+.reveal-item.revealed {
+    opacity: 1;
+    transform: translateY(0) translateX(0) scale(1);
+}
+
+/* Micro-stagger delays */
+.reveal-item[data-delay="100"] { transition-delay: 0.08s; }
+.reveal-item[data-delay="150"] { transition-delay: 0.12s; }
+.reveal-item[data-delay="180"] { transition-delay: 0.15s; }
+.reveal-item[data-delay="200"] { transition-delay: 0.18s; }
+.reveal-item[data-delay="250"] { transition-delay: 0.22s; }
+.reveal-item[data-delay="260"] { transition-delay: 0.24s; }
+.reveal-item[data-delay="300"] { transition-delay: 0.28s; }
+.reveal-item[data-delay="340"] { transition-delay: 0.32s; }
+.reveal-item[data-delay="350"] { transition-delay: 0.34s; }
+.reveal-item[data-delay="400"] { transition-delay: 0.38s; }
+.reveal-item[data-delay="450"] { transition-delay: 0.42s; }
+
+/* ==========================================================================
+   5. KEYFRAME ANIMATIONS & PULSES
+   ========================================================================== */
+
+@keyframes conciergePulse {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.15);
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(1.25);
+        opacity: 0;
+    }
+}
+
+@keyframes livePulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.4;
+        transform: scale(0.85);
+    }
+}
+
+@keyframes heartBeat {
+    0%, 100% { transform: scale(1); }
+    14% { transform: scale(1.22); }
+    28% { transform: scale(1); }
+    42% { transform: scale(1.12); }
+    70% { transform: scale(1); }
+}
+
+@keyframes ecgDash {
+    0% { stroke-dashoffset: 600; }
+    50% { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: -600; }
+}
+
+@keyframes scrollWheel {
+    0% { top: 6px; opacity: 1; }
+    50% { top: 18px; opacity: 0.2; }
+    100% { top: 6px; opacity: 1; }
+}
+
+@keyframes audioDance {
+    0% { height: 3px; }
+    100% { height: 14px; }
+}
+
+@keyframes floatSmooth {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.float-anim {
+    animation: floatSmooth 3.5s ease-in-out infinite;
+}
+
+.float-anim-delayed {
+    animation: floatSmooth 4s ease-in-out infinite 1.2s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

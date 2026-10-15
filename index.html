@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISION GYM // High-Intensity Boutique Studio & Athletic Arena</title>
+    <meta name="description" content="VISION GYM is a no-contract high intensity boutique studio. 45-minute metabolic conditioning, Olympic platforms, luxury recovery suites, and world-class athletic coaching.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="loading-state">
+
+    <!-- TOP-RIGHT ACCENT STRIPE (MATCHING REFERENCE THEME) -->
+    <div class="top-corner-accent"></div>
+
+    <!-- PRELOADER & INTRO TELEMETRY -->
+    <div class="preloader-overlay" id="preloader">
+        <div class="preloader-shutter preloader-shutter-top"></div>
+        <div class="preloader-shutter preloader-shutter-bottom"></div>
+        <div class="preloader-content">
+            <div class="preloader-badge">
+                <span class="pulse-dot"></span> VISION STUDIO PROTOCOL
+            </div>
+            <div class="preloader-brand">
+                <span class="brand-text">VISION</span>
+                <span class="brand-sub">HIGH-INTENSITY BOUTIQUE GYM</span>
+            </div>
+            
+            <div class="preloader-ecg-container">
+                <svg class="ecg-svg" viewBox="0 0 500 60" preserveAspectRatio="none">
+                    <path class="ecg-track" d="M0,30 L120,30 L135,10 L150,50 L165,5 L180,55 L195,30 L320,30 L335,15 L350,45 L365,10 L380,50 L395,30 L500,30" />
+                    <path class="ecg-pulse" id="ecgPulse" d="M0,30 L120,30 L135,10 L150,50 L165,5 L180,55 L195,30 L320,30 L335,15 L350,45 L365,10 L380,50 L395,30 L500,30" />
+                </svg>
+            </div>
+
+            <div class="preloader-progress-wrap">
+                <div class="preloader-bar">
+                    <div class="preloader-bar-fill" id="preloaderFill"></div>
+                </div>
+                <div class="preloader-status">
+                    <span class="status-msg" id="loaderStatusMsg">INITIALIZING 45-MIN BOUTIQUE STUDIO...</span>
+                    <span class="status-num" id="loaderCounter">00%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PERSISTENT FLOATING CONCIERGE: CALL & WHATSAPP -->
+    <div class="floating-concierge-suite" id="conciergeSuite">
+        <a href="https://wa.me/18005552739?text=Hello%20VISION%20GYM%2C%20I%20would%20like%20to%20book%20a%2045-minute%20trial%20class%20and%20check%20pricing." 
+           target="_blank" rel="noopener noreferrer" class="concierge-btn concierge-whatsapp sample-action-btn" aria-label="Chat on WhatsApp (Sample)">
+            <span class="concierge-pulse-ring"></span>
+            <div class="concierge-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.17c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.4c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.25-8.22 8.25zm4.52-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.54c.12.17 1.73 2.65 4.2 3.71.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.18-.47-.3z"/>
+                </svg>
+            </div>
+            <div class="concierge-content">
+                <span class="concierge-status"><span class="c-dot"></span> SAMPLE ONLINE</span>
+                <span class="concierge-label">WhatsApp (Sample)</span>
+            </div>
+        </a>
+
+        <a href="tel:+18005552739" class="concierge-btn concierge-phone btn-call sample-action-btn" aria-label="Call Vision Gym Direct (Sample)">
+            <div class="concierge-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+            </div>
+            <div class="concierge-content">
+                <span class="concierge-status">DIRECT DESK</span>
+                <span class="concierge-label">Call Blue (Sample)</span>
+            </div>
+        </a>
+    </div>
+
+    <!-- SITE HEADER (MATCHING HIGH45 / BOUTIQUE CLEAN AESTHETIC) -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-container-theme">
+            <!-- Brand Logo -->
+            <a href="#hero" class="brand-logo-theme">
+                <span class="logo-bold">VISION</span><span class="logo-dot">.</span><span class="logo-light">GYM</span>
+            </a>
+
+            <!-- Center Navigation Links with Minimal Active Indicators -->
+            <nav class="desktop-nav-theme" id="desktopNav">
+                <a href="#hero" class="theme-nav-link active">VISION GYM</a>
+                <a href="#performance" class="theme-nav-link">PERFORMANCE</a>
+                <a href="#facilities" class="theme-nav-link">STUDIO</a>
+                <a href="#exclusive-facilities" class="theme-nav-link">FACILITIES</a>
+                <a href="#locations" class="theme-nav-link">LOCATIONS</a>
+            </nav>
+
+            <!-- Right Socials & Direct Contact -->
+            <div class="header-right-theme">
+                <div class="theme-socials">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-ico" aria-label="Facebook">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.597 0 9 1.583 9 4.615V8z"/></svg>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-ico" aria-label="Twitter">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-ico" aria-label="Instagram">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                </div>
+
+                <a href="tel:+18005552739" class="header-phone-badge btn-call sample-action-btn" title="Call Us Direct (Sample)">
+                    <span>📞 (800) 555-VISION</span>
+                </a>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
+                    <span class="toggle-bar"></span>
+                    <span class="toggle-bar"></span>
+                    <span class="toggle-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU DRAWER -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-header">
+            <span class="drawer-brand">VISION // STUDIO</span>
+            <button class="drawer-close" id="drawerClose">✕</button>
+        </div>
+        <div class="drawer-nav">
+            <a href="#hero" class="drawer-link"><span class="d-num">01</span> Vision Gym Studio</a>
+            <a href="#performance" class="drawer-link"><span class="d-num">02</span> Performance Telemetry</a>
+            <a href="#facilities" class="drawer-link"><span class="d-num">03</span> Boutique Arenas</a>
+            <a href="#exclusive-facilities" class="drawer-link"><span class="d-num">04</span> Rare Facilities</a>
+            <a href="#locations" class="drawer-link"><span class="d-num">05</span> Studio Locations</a>
+        </div>
+        <div class="drawer-actions-box">
+            <a href="tel:+18005552739" class="btn btn-call btn-block mb-2 sample-action-btn">📞 Call +1 (800) 555-VISION (Sample)</a>
+            <a href="https://wa.me/18005552739" class="btn btn-whatsapp btn-block mb-2 sample-action-btn">💬 WhatsApp Concierge (Sample)</a>
+            <a href="#exclusive-facilities" class="btn btn-primary-theme btn-block" onclick="if(window.mobileDrawer) mobileDrawer.classList.remove('active')">Explore Rare Facilities</a>
+        </div>
+    </div>
+
+    <main id="mainContent">
+
+        <!-- =========================================================================
+             SECTION 1: HERO - EXACT 1:1 RECREATION OF UPLOADED REFERENCE THEME
+             ========================================================================= -->
+        <section class="vision-hero-viewport" id="hero">
+            <!-- Studio Background Photograph Layer (FROM USER'S FIRST REFERENCE IMAGE WITH TEXT LAYERED UPON IT) -->
+            <div class="vision-studio-backdrop-wrap" id="heroPhotoWrap">
+                <img src="assets/images/goal-1.png" id="heroStudioImg" alt="Vision Gym Olympic Arena Interior with Hexagonal Ceiling Lights" class="vision-studio-img" loading="eager" fetchpriority="high">
+                <div class="vision-studio-vignette"></div>
+            </div>
+
+            <!-- LIVE STUDIO CAMERA SWITCHER (INTERACTIVE MULTI-VIEW STUDIO BROADCAST) -->
+            <div class="hero-cam-switcher" id="heroCamSwitcher">
+                <button class="cam-switch-btn active" onclick="switchHeroCam(this, 'assets/images/goal-1.png')"><span class="rec-dot"></span> CAM 01 // OLYMPIC ARENA</button>
+                <button class="cam-switch-btn" onclick="switchHeroCam(this, 'assets/images/vision-studio-exact.jpg')">CAM 02 // BOUTIQUE STUDIO</button>
+                <button class="cam-switch-btn" onclick="switchHeroCam(this, 'assets/images/client-photo-3.jpg')">CAM 03 // LINEAR LIGHT SUITE</button>
+                <button class="cam-switch-btn" onclick="switchHeroCam(this, 'assets/images/goal-6.png')">CAM 04 // CARDIO DECK</button>
+            </div>
+
+            <!-- THE SIGNATURE GLOWING NEON CIRCULAR RINGS (MATCHING REFERENCE EXACTLY) -->
+            <svg class="vision-neon-rings-svg" viewBox="0 0 1440 900" fill="none" preserveAspectRatio="none">
+                <!-- Outer huge sweeping lower-left arc -->
+                <circle cx="280" cy="560" r="480" stroke="#d4ff00" stroke-width="8" stroke-linecap="round" class="ring-arc-main" />
+                <!-- Upper left smaller accent arc -->
+                <circle cx="120" cy="350" r="110" stroke="#d4ff00" stroke-width="6" stroke-linecap="round" class="ring-arc-sub" stroke-dasharray="450" stroke-dashoffset="120" />
+            </svg>
+
+            <!-- HERO OVERLAY CONTENT: EXACT TYPOGRAPHY, POSITIONING & PILL BUTTON -->
+            <div class="vision-hero-inner-container">
+                <div class="vision-hero-content-box reveal-item" data-anim="fade-up">
+                    <!-- Condensed High-Impact Headline -->
+                    <h1 class="vision-headline">
+                        <span class="vh-line vh-brand">VISION GYM</span>
+                    </h1>
+
+                    <!-- Clean Elegant Description Paragraph -->
+                    <p class="vision-description">
+                        VISION GYM is an elite high-intensity boutique sanctuary where science meets pure athletic drive. Experience transformative 45-minute strength and metabolic conditioning engineered to burn relentless calories, forge an unbreakable mindset, and elevate your physique &mdash; crafted for every ambition and welcoming to all fitness levels.
+                    </p>
+
+                    <!-- Exact Bright Neon Pill Button -->
+                    <div class="vision-cta-wrap">
+                        <a href="#exclusive-facilities" class="btn-vision-pill">
+                            EXPLORE EXCLUSIVE FACILITIES
+                        </a>
+                        
+                        <!-- Quick Call & WhatsApp companion pills -->
+                        <div class="vision-quick-links">
+                            <a href="https://wa.me/18005552739?text=Hello%20VISION%20GYM%2C%20I%20want%20to%20book%20a%20class" 
+                               target="_blank" rel="noopener noreferrer" class="vision-link-pill whatsapp-pill-link">
+                                💬 WhatsApp Inquiry (Sample)
+                            </a>
+                            <a href="tel:+18005552739" class="vision-link-pill">
+                                📞 Call Direct
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Right Circular Down-Arrow Button (Matching Reference Screenshot) -->
+            <a href="#performance" class="vision-scroll-btn" aria-label="Scroll to Next Section">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </a>
+        </section>
+
+        <!-- =========================================================================
+             SECTION 2: COMMUNITY & OVERALL GYM PERFORMANCE TELEMETRY
+             ========================================================================= -->
+        <section class="performance-section" id="performance">
+            <div class="section-container">
+                <div class="section-header text-center">
+                    <div class="section-tag reveal-item" data-anim="fade-up">
+                        <span class="tag-hash">#</span> REAL-TIME STUDIO TELEMETRY
+                    </div>
+                    <h2 class="section-title reveal-item" data-anim="fade-up">
+                        <span class="text-mask-wrapper">
+                            <span class="text-mask-item tw-1">PROVEN</span>
+                        </span>
+                        <span class="text-mask-wrapper">
+                            <span class="text-mask-item tw-2">STUDIO</span>
+                        </span>
+                        <span class="text-mask-wrapper">
+                            <span class="text-mask-item tw-3 text-highlight">PERFORMANCES.</span>
+                        </span>
+                    </h2>
+                    <p class="section-subtitle reveal-item" data-anim="fade-up" data-delay="150">
+                        In each 45-minute VISION session, biometrics are streamed in real time. Compare calories torched, heart-rate zones, and verified athlete milestones.
+                    </p>
+                </div>
+
+                <!-- 4 MAJOR KPI PERFORMANCE METRICS -->
+                <div class="performance-grid">
+                    <div class="kpi-card reveal-item" data-anim="card-reveal" data-delay="100">
+                        <div class="kpi-card-glow"></div>
+                        <div class="kpi-header">
+                            <span class="kpi-icon-box">⚡</span>
+                            <span class="kpi-trend trend-up">45 MIN SESSIONS</span>
+                        </div>
+                        <div class="kpi-body">
+                            <div class="kpi-number-wrap">
+                                <span class="kpi-number" data-counter="850" data-suffix=" kcal">0 kcal</span>
+                            </div>
+                            <h3 class="kpi-label">Average Session Calorie Burn</h3>
+                            <p class="kpi-desc">Continuous high-intensity interval tracking using Polar & Myzone biometric straps.</p>
+                        </div>
+                        <div class="kpi-footer">
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 92%;"></div>
+                            </div>
+                            <span class="progress-caption">EPOC Afterburn Active: Up to 36 Hours</span>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card reveal-item" data-anim="card-reveal" data-delay="180">
+                        <div class="kpi-card-glow"></div>
+                        <div class="kpi-header">
+                            <span class="kpi-icon-box">🏆</span>
+                            <span class="kpi-trend trend-up">99.4% SATISFACTION</span>
+                        </div>
+                        <div class="kpi-body">
+                            <div class="kpi-number-wrap">
+                                <span class="kpi-number" data-counter="14850" data-suffix="+">0</span>
+                            </div>
+                            <h3 class="kpi-label">Active Studio Members</h3>
+                            <p class="kpi-desc">Busy executives, athletes, and fitness enthusiasts thriving in our community.</p>
+                        </div>
+                        <div class="kpi-footer">
+                            <div class="progress-track">
+                                <div class="progress-fill fill-neon" style="width: 96%;"></div>
+                            </div>
+                            <span class="progress-caption">Community Retention: 98.4%</span>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card reveal-item" data-anim="card-reveal" data-delay="260">
+                        <div class="kpi-card-glow"></div>
+                        <div class="kpi-header">
+                            <span class="kpi-icon-box">⏱️</span>
+                            <span class="kpi-trend trend-up">ZERO CONTRACT</span>
+                        </div>
+                        <div class="kpi-body">
+                            <div class="kpi-number-wrap">
+                                <span class="kpi-number" data-counter="45" data-suffix=" MIN">0 MIN</span>
+                            </div>
+                            <h3 class="kpi-label">Time-Optimized Protocol</h3>
+                            <p class="kpi-desc">Scientifically calibrated to torch maximum fat without eating up your busy workday.</p>
+                        </div>
+                        <div class="kpi-footer">
+                            <div class="progress-track">
+                                <div class="progress-fill fill-cyan" style="width: 100%;"></div>
+                            </div>
+                            <span class="progress-caption">Drop-in Anytime • No Long Lock-in</span>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card reveal-item" data-anim="card-reveal" data-delay="340">
+                        <div class="kpi-card-glow"></div>
+                        <div class="kpi-header">
+                            <span class="kpi-icon-box">⚖️</span>
+                            <span class="kpi-trend trend-gold">DEXA TESTED</span>
+                        </div>
+                        <div class="kpi-body">
+                            <div class="kpi-number-wrap">
+                                <span class="kpi-number" data-counter="94.6" data-suffix="%">0%</span>
+                            </div>
+                            <h3 class="kpi-label">Body Recomposition Rate</h3>
+                            <p class="kpi-desc">Members dropping >5% body fat within their first 12 weeks of consistent attendance.</p>
+                        </div>
+                        <div class="kpi-footer">
+                            <div class="progress-track">
+                                <div class="progress-fill fill-ember" style="width: 95%;"></div>
+                            </div>
+                            <span class="progress-caption">Verified Body Fat Reduction</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LIVE STUDIO FLOOR TELEMETRY SHOWCASE (AUTHENTIC FACILITY INTEGRATION) -->
+                <div class="live-telemetry-visual-card reveal-item" data-anim="fade-up" data-delay="360">
+                    <div class="telemetry-media-box">
+                        <img src="assets/images/client-photo-3.jpg" alt="Live Studio Telemetry Monitor" class="telemetry-media-img">
+                        <div class="cinema-media-vignette"></div>
+                        <div class="cinema-live-status">
+                            <span class="live-rec-dot"></span>
+                            <span>LIVE ARENA TELEMETRY // BALA NAGAR MAIN FLOOR</span>
+                        </div>
+                    </div>
+                    <div class="telemetry-content-box">
+                        <span class="section-tag mb-2"><span class="tag-hash">//</span> ACTIVE ARENA DATA</span>
+                        <h3 class="hud-zone-title">Real-Time Biometric Tracking On-Floor</h3>
+                        <p class="hud-zone-desc">
+                            Every squat rack, cable bay, and Skillmill station links directly to your personalized workout telemetry dashboard, displaying real-time heart rate zones and certified caloric burn.
+                        </p>
+                        <div class="hud-specs-row mb-4">
+                            <span class="hud-spec-pill"><span>📡</span> RFID Barcode Wristband Access</span>
+                            <span class="hud-spec-pill"><span>⚡</span> Instant Polar HR Link</span>
+                            <span class="hud-spec-pill"><span>📊</span> 850 kcal Avg Target</span>
+                        </div>
+                        <div>
+                            <a href="https://wa.me/18005552739?text=Hello%20VISION%20GYM%2C%20tell%20me%20about%20the%20live%20telemetry%20tracking" 
+                               target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm sample-action-btn">
+                                <span>💬 Chat With Performance Coach</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             SECTION 3: THE BOUTIQUE STUDIO & FACILITIES (INTERACTIVE CINEMA EXPLORER)
+             ========================================================================= -->
+        <section class="facilities-compendium-section" id="facilities">
+            <div class="section-container">
+                <div class="section-header text-center">
+                    <div class="section-tag reveal-item" data-anim="fade-up">
+                        <span class="tag-hash">//</span> THE BOUTIQUE ENVIRONMENT
+                    </div>
+                    <h2 class="section-title reveal-item" data-anim="fade-up">
+                        <span class="text-mask-wrapper">
+                            <span class="text-mask-item tw-1">THE</span>
+                        </span>
+                        <span class="text-mask-wrapper">
+                            <span class="text-mask-item tw-2 text-highlight">STUDIO</span>
+                        </span>
+                        <span class="text-mask-wrapper">
+                            <span class="text-mask-item tw-3">&</span>
+                        </span>
+                        <span class="text-mask-wrapper">
+                            <span class="text-mask-item tw-4">ARENAS.</span>
+                        </span>
+                    </h2>
+                    <p class="section-subtitle reveal-item" data-anim="fade-up" data-delay="150">
+                        Explore our purpose-built training zones. Click any arena to inspect equipment specifications, lighting architecture, and biometric features without tedious scrolling.
+                    </p>
+                </div>
+
+                <!-- INTERACTIVE STUDIO CINEMA EXPLORER (COMPACT, DYNAMIC, ZERO ENDLESS SCROLLING) -->
+                <div class="studio-cinema-explorer reveal-item" data-anim="fade-up" data-delay="180">
+                    <!-- Zone Selector Tabs -->
+                    <div class="cinema-zone-pills" id="cinemaZonePills">
+                        <button class="zone-pill active" onclick="selectStudioZone(0)"><span>01</span> Olympic Vault</button>
+                        <button class="zone-pill" onclick="selectStudioZone(1)"><span>02</span> Cardio Fleet</button>
+                        <button class="zone-pill" onclick="selectStudioZone(2)"><span>03</span> Machine Suite</button>
+                        <button class="zone-pill" onclick="selectStudioZone(3)"><span>04</span> 4D Recovery Lounge</button>
+                        <button class="zone-pill" onclick="selectStudioZone(4)"><span>05</span> Hybrid Spin Bay</button>
+                        <button class="zone-pill" onclick="selectStudioZone(5)"><span>06</span> Dumbbell Arena</button>
+                        <button class="zone-pill" onclick="selectStudioZone(6)"><span>07</span> Linear Track Bay</button>
+                    </div>
+
+                    <!-- Main Cinema Screen -->
+                    <div class="cinema-main-stage">
+                        <div class="cinema-media-wrap">
+                            <img src="assets/images/goal-1.png" id="cinemaMainImg" alt="Vision Gym Studio Zone" class="cinema-main-img">
+                            <div class="cinema-media-vignette"></div>
+                            
+                            <div class="cinema-live-status">
+                                <span class="live-rec-dot"></span>
+                                <span id="cinemaZoneTag">ZONE 01 // ARCHITECTURAL HEXAGONS</span>
+                            </div>
+
+                            <button class="cinema-nav-arrow cinema-prev" onclick="prevStudioZone()" aria-label="Previous Zone">‹</button>
+                            <button class="cinema-nav-arrow cinema-next" onclick="nextStudioZone()" aria-label="Next Zone">›</button>
+                        </div>
+
+                        <!-- Info HUD -->
+                        <div class="cinema-info-hud">
+                            <div class="hud-left">
+                                <h3 class="hud-zone-title" id="cinemaZoneTitle">Olympic Lifting & Hexagonal Strength Vault</h3>
+                                <p class="hud-zone-desc" id="cinemaZoneDesc">
+                                    Competition-grade Olympic barbell stations, calibrated bumper plates, heavy plate-loaded leg press, and chest press bays illuminated by ambient architectural hexagonal lighting.
+                                </p>
+                                <div class="hud-specs-row" id="cinemaZoneSpecs">
+                                    <span class="hud-spec-pill"><span>⚡</span> Eleiko Barbell Stations</span>
+                                    <span class="hud-spec-pill"><span>⚡</span> Plate-Loaded Leg Press</span>
+                                    <span class="hud-spec-pill"><span>⚡</span> Acoustic Drop Turf</span>
+                                </div>
+                            </div>
+                            <div class="hud-right">
+                                <div class="hud-actions">
+                                    <a href="https://wa.me/18005552739?text=Hello%20VISION%20GYM%2C%20I%20would%20like%20to%20book%20a%20private%20tour%20of%20the%20Olympic%20Vault" 
+                                       target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm sample-action-btn">
+                                        <span>💬 WhatsApp Inquiry (Sample)</span>
+                                    </a>
+                                    <a href="tel:+18005552739" class="btn btn-call btn-sm sample-action-btn">
+                                        <span>📞 Direct Desk (Sample)</span>
+                                    </a>
+                                </div>
+                                <span class="hud-counter"><span id="cinemaCurrentIndex">01</span> / 07</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Compact Filmstrip -->
+                    <div class="cinema-filmstrip" id="cinemaFilmstrip">
+                        <div class="filmstrip-item active" onclick="selectStudioZone(0)">
+                            <img src="assets/images/goal-1.png" alt="Zone 1">
+                            <div class="filmstrip-label">01 // Olympic</div>
+                        </div>
+                        <div class="filmstrip-item" onclick="selectStudioZone(1)">
+                            <img src="assets/images/goal-6.png" alt="Zone 2">
+                            <div class="filmstrip-label">02 // Cardio</div>
+                        </div>
+                        <div class="filmstrip-item" onclick="selectStudioZone(2)">
+                            <img src="assets/images/goal-4.png" alt="Zone 3">
+                            <div class="filmstrip-label">03 // Machines</div>
+                        </div>
+                        <div class="filmstrip-item" onclick="selectStudioZone(3)">
+                            <img src="assets/images/goal-5.png" alt="Zone 4">
+                            <div class="filmstrip-label">04 // Recovery</div>
+                        </div>
+                        <div class="filmstrip-item" onclick="selectStudioZone(4)">
+                            <img src="assets/images/goal-2.png" alt="Zone 5">
+                            <div class="filmstrip-label">05 // Spin Bay</div>
+                        </div>
+                        <div class="filmstrip-item" onclick="selectStudioZone(5)">
+                            <img src="assets/images/goal-3.png" alt="Zone 6">
+                            <div class="filmstrip-label">06 // Free Weights</div>
+                        </div>
+                        <div class="filmstrip-item" onclick="selectStudioZone(6)">
+                            <img src="assets/images/client-photo-3.jpg" alt="Zone 7">
+                            <div class="filmstrip-label">07 // Linear Track</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FACILITY DIRECT INQUIRY BAR -->
+                <div class="facility-contact-cta reveal-item" data-anim="fade-up" data-delay="200">
+                    <div class="cta-inner">
+                        <div>
+                            <h4 class="f-cta-heading">Want a Private Walkthrough of the Studio?</h4>
+                            <p class="f-cta-sub">Our studio director will show you the Skillmills, free weights, and contrast plunge suites.</p>
+                        </div>
+                        <div class="f-cta-buttons">
+                            <a href="https://wa.me/18005552739?text=Hello%20VISION%20GYM%2C%20I%20would%20like%20to%20schedule%20a%20studio%20tour" 
+                               target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp sample-action-btn">
+                                <span>Schedule on WhatsApp (Sample)</span>
+                            </a>
+                            <a href="tel:+18005552739" class="btn btn-call sample-action-btn">
+                                <span>Call Direct (Sample)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        
+        <!-- =========================================================================
+             SECTION 4: EXCLUSIVE HIGH-TECH FACILITIES ONLY CERTAIN GYMS PROVIDE
+             ========================================================================= -->
+        <section class="exclusive-facilities-section" id="exclusive-facilities">
+            <div class="section-container">
+                <div class="section-header text-center">
+                    <div class="section-tag reveal-item" data-anim="fade-up">
+                        <span class="tag-hash">//</span> ELITE 1% GYM PRIVILEGES
+                    </div>
+                    <h2 class="section-title reveal-item" data-anim="fade-up">
+                        <span class="text-mask-wrapper">
+                            <span class="text-mask-item tw-1">EXCLUSIVE</span>
+                        </span>
+                        <span class="text-mask-wrapper">
+                            <span class="text-mask-item tw-2 text-highlight">FACILITIES</span>
+                        </span>
+                        <span class="text-mask-wrapper">
+                            <span class="text-mask-item tw-3">ONLY</span>
+                        </span>
+                        <span class="text-mask-wrapper">
+                            <span class="text-mask-item tw-4">WE PROVIDE.</span>
+                        </span>
+                    </h2>
+                    <p class="section-subtitle reveal-item" data-anim="fade-up" data-delay="150">
+                        Most commercial gyms only provide standard racks and treadmills. VISION GYM is engineered with medical-grade recovery technology, 3D biometric scanning, and contrast hydrotherapy found only in Olympic institutes.
+                    </p>
+                </div>
+
+                <!-- 6 EXCLUSIVE FACILITIES GRID (HIGH-IMPACT CARDS WITH HIGH-TECH SPECS) -->
+                <div class="exclusive-facilities-grid">
+                    <!-- Facility 1: Zero-Gravity Recovery Loungers -->
+                    <div class="exclusive-facility-card reveal-item" data-anim="card-reveal" data-delay="100">
+                        <div class="ex-card-media">
+                            <img src="assets/images/goal-5.png" alt="Zero-Gravity 4D Recovery Loungers" class="ex-card-img">
+                            <span class="ex-badge-tier">⚡ 1% GYM RARITY</span>
+                            <span class="ex-badge-category">RECOVERY LAB</span>
+                        </div>
+                        <div class="ex-card-content">
+                            <div class="ex-card-header">
+                                <h3 class="ex-facility-name">Zero-Gravity 4D Acupressure Loungers</h3>
+                                <p class="ex-facility-lead">Autonomous full-body decompression suites engineered for instant lactic acid clearance post-workout.</p>
+                            </div>
+                            <div class="ex-specs-matrix">
+                                <div class="ex-spec-item">
+                                    <span class="ex-spec-k">Vessel Angle</span>
+                                    <span class="ex-spec-v text-neon">128° Zero-G Incline</span>
+                                </div>
+                                <div class="ex-spec-item">
+                                    <span class="ex-spec-k">Therapy</span>
+                                    <span class="ex-spec-v text-cyan">Far-Infrared Heat</span>
+                                </div>
+                                <div class="ex-spec-item">
+                                    <span class="ex-spec-k">Compression</span>
+                                    <span class="ex-spec-v">32-Cell Airbag Pulse</span>
+                                </div>
+                            </div>
+                            <p class="ex-facility-description">
+                                Only a handful of ultra-boutique athletic clubs globally provide private zero-gravity recovery loungers. It elevates your legs above heart level, neutralizes spinal compression, and eliminates metabolic soreness in under 15 minutes.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Facility 2: Sub-3°C Polar Contrast Hydrotherapy & Cedar Sauna -->
+                    <div class="exclusive-facility-card reveal-item" data-anim="card-reveal" data-delay="180">
+                        <div class="ex-card-media">
+                            <img src="assets/images/facility.jpg" alt="Sub-3C Polar Plunge and Finnish Sauna" class="ex-card-img">
+                            <span class="ex-badge-tier">⚡ OLYMPIC STANDARD</span>
+                            <span class="ex-badge-category">HYDROTHERAPY</span>
+                        </div>
+                        <div class="ex-card-content">
+                            <div class="ex-card-header">
+                                <h3 class="ex-facility-name">Active-Current Polar Plunge & Finnish Sauna</h3>
+                                <p class="ex-facility-lead">Medical-grade 3°C cold plunge tubs with continuous laminar filtration coupled with 90°C dry cedar saunas.</p>
+                            </div>
+                            <div class="ex-specs-matrix">
+                                <div class="ex-spec-item">
+                                    <span class="ex-spec-k">Plunge Temp</span>
+                                    <span class="ex-spec-v text-cyan">3°C (37.4°F) Active Current</span>
+                                </div>
+                                <div class="ex-spec-item">
+                                    <span class="ex-spec-k">Sauna Temp</span>
+                                    <span class="ex-spec-v text-ember">90°C Red Cedar Dry</span>
+                                </div>
+                                <div class="ex-spec-item">
+                                    <span class="ex-spec-k">Sterilization</span>
+                                    <span class="ex-spec-v">Continuous UV-C & Ozone</span>
+                                </div>
+                            </div>
+                            <p class="ex-facility-description">
+                                Ordinary commercial gyms do not manage sanitary sub-3°C active-flow cold water circuits. Our automated chillers trigger rapid vasoconstriction and vasodilation contrast cycles, doubling heart-rate variability (HRV) and mental resilience.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Facility 3: 3D DEXA Biometric & Optical Body Composition Scanner -->
+                    <div class="exclusive-facility-card reveal-item" data-anim="card-reveal" data-delay="260">
+                        <div class="ex-card-media">
+                            <img src="assets/images/transformation.jpg" alt="3D Optical Body Scanner" class="ex-card-img">
+                            <span class="ex-badge-tier">⚡ CLINICAL PRECISION</span>
+                            <span class="ex-badge-category">DIAGNOSTICS</span>
+                        </div>
+                        <div class="ex-card-content">
+                            <div class="ex-card-header">
+                                <h3 class="ex-facility-name">3D Optical Body Scanner & DEXA Lab</h3>
+                                <p class="ex-facility-lead">Sub-millimeter infrared optical surface reconstruction measuring visceral adipose tissue, bone density, and lean muscular balance.</p>
+                            </div>
+                            <div class="ex-specs-matrix">
+                                <div class="ex-spec-item">
+                                    <span class="ex-spec-k">Accuracy</span>
+                                    <span class="ex-spec-v text-neon">±0.1% Volumetric Precision</span>
+                                </div>
+                                <div class="ex-spec-item">
+                                    <span class="ex-spec-k">Scan Duration</span>
+                                    <span class="ex-spec-v text-cyan">35 Seconds Full 360°</span>
+                                </div>
+                                <div class="ex-spec-item">
+                                    <span class="ex-spec-k">Data Points</span>
+                                    <span class="ex-spec-v">2.5 Million 3D Points</span>
+                                </div>
+                            </div>
+                            <p class="ex-facility-description">
+                                Stop guessing with crude bathroom scales. Our clinical 3D optical chamber generates an exact avatar of your physique, revealing microscopic posture alignments, visceral fat distribution, and localized muscle hypertrophy progress.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Facility 4: Red-Light Photobiomodulation & Near-Infrared Canopy -->
+                    <div class="exclusive-facility-card reveal-item" data-anim="card-reveal" data-delay="340">
+                        <div class="ex-card-media">
+                            <img src="assets/images/vision-studio-exact.jpg" alt="Red Light Photobiomodulation Canopy" class="ex-card-img">
+                            <span class="ex-badge-tier">⚡ MITOCHONDRIAL BIOHACK</span>
+                            <span class="ex-badge-category">PHOTONICS</span>
+                        </div>
+                        <div class="ex-card-content">
+                            <div class="ex-card-header">
+                                <h3 class="ex-facility-name">Whole-Body Photobiomodulation Canopy</h3>
+                                <p class="ex-facility-lead">Dual-wavelength medical LED photon emitters recharging muscular mitochondria and stimulating natural collagen synthesis.</p>
+                            </div>
+                            <div class="ex-specs-matrix">
+                                <div class="ex-spec-item">
+                                    <span class="ex-spec-k">Wavelength 01</span>
+                                    <span class="ex-spec-v text-ember">660nm Deep Red Photons</span>
+                                </div>
+                                <div class="ex-spec-item">
+                                    <span class="ex-spec-k">Wavelength 02</span>
+                                    <span class="ex-spec-v text-cyan">850nm Near-Infrared</span>
+                                </div>
+                                <div class="ex-spec-item">
+                                    <span class="ex-spec-k">Cell Target</span>
+                                    <span class="ex-spec-v text-neon">ATP Mitochondrial Synthesis</span>
+                                </div>
+                            </div>
+                            <p class="ex-facility-description">
+                                Rare in commercial fitness, photobiomodulation penetrates 5cm beneath dermal tissue directly into muscle fibers to accelerate ATP production, soothe inflamed joints, and shorten recovery windows between high-intensity classes.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Facility 5: Technogym Skillmill Motorless Curve Rigs with Telemetry -->
+                    <div class="exclusive-facility-card reveal-item" data-anim="card-reveal" data-delay="420">
+                        <div class="ex-card-media">
+                            <img src="assets/images/goal-6.png" alt="Technogym Skillmill Curve Sled Stations" class="ex-card-img">
+                            <span class="ex-badge-tier">⚡ PRO ATHLETE GEAR</span>
+                            <span class="ex-badge-category">SPEED & POWER</span>
+                        </div>
+                        <div class="ex-card-content">
+                            <div class="ex-card-header">
+                                <h3 class="ex-facility-name">Motorless Curved Skillmills & Sled Simulation</h3>
+                                <p class="ex-facility-lead">Non-motorized athletic running platforms that instantly switch into heavy friction push sleds with real-time wattage tracking.</p>
+                            </div>
+                            <div class="ex-specs-matrix">
+                                <div class="ex-spec-item">
+                                    <span class="ex-spec-k">Drive Type</span>
+                                    <span class="ex-spec-v text-neon">Athlete-Powered Curved Slats</span>
+                                </div>
+                                <div class="ex-spec-item">
+                                    <span class="ex-spec-k">Resistance</span>
+                                    <span class="ex-spec-v text-cyan">Multi-Drive Dual Resistance</span>
+                                </div>
+                                <div class="ex-spec-item">
+                                    <span class="ex-spec-k">Caloric Burn</span>
+                                    <span class="ex-spec-v">+30% Over Standard Decks</span>
+                                </div>
+                            </div>
+                            <p class="ex-facility-description">
+                                Standard treadmills force a fixed belt speed. Skillmills demand your posterior chain to propel the belt, recruiting 30% more muscle fibers, correcting stride mechanics, and delivering authentic athletic sprint training.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Facility 6: Acoustic Anti-Vibration Heavy Olympic Drop Turf -->
+                    <div class="exclusive-facility-card reveal-item" data-anim="card-reveal" data-delay="500">
+                        <div class="ex-card-media">
+                            <img src="assets/images/goal-1.png" alt="Acoustic Shock Absorbing Olympic Turf" class="ex-card-img">
+                            <span class="ex-badge-tier">⚡ COMPETITION ELEIKO SPEC</span>
+                            <span class="ex-badge-category">HEAVY STRENGTH</span>
+                        </div>
+                        <div class="ex-card-content">
+                            <div class="ex-card-header">
+                                <h3 class="ex-facility-name">Acoustic Decoupled Olympic Drop Arena</h3>
+                                <p class="ex-facility-lead">Multi-layered acoustic floating sub-floors with genuine Eleiko calibrated steel discs and needle-bearing competition bars.</p>
+                            </div>
+                            <div class="ex-specs-matrix">
+                                <div class="ex-spec-item">
+                                    <span class="ex-spec-k">Flooring</span>
+                                    <span class="ex-spec-v text-neon">45mm Triple-Layer Regupol</span>
+                                </div>
+                                <div class="ex-spec-item">
+                                    <span class="ex-spec-k">Noise Dampening</span>
+                                    <span class="ex-spec-v text-cyan">-38dB Kinetic Decoupling</span>
+                                </div>
+                                <div class="ex-spec-item">
+                                    <span class="ex-spec-k">Equipment</span>
+                                    <span class="ex-spec-v">Eleiko IWF-Certified Rigs</span>
+                                </div>
+                            </div>
+                            <p class="ex-facility-description">
+                                Drop heavy barbells without judgment or floor bounce. Engineered with aerospace kinetic shock dissipation, allowing maximum velocity cleans, snatches, and deadlifts in an ambient, architectural boutique environment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             SECTION 8: OFFICIAL STUDIO LOCATIONS & CENTRES
+             ========================================================================= -->
+        <section class="studio-locations-section" id="locations">
+            <div class="section-container">
+                <div class="section-header text-center">
+                    <div class="section-tag reveal-item" data-anim="fade-up">
+                        <span class="tag-hash">//</span> BOUTIQUE HUBS
+                    </div>
+                    <h2 class="section-title reveal-item" data-anim="fade-up">
+                        <span class="text-mask-wrapper">
+                            <span class="text-mask-item tw-1">OUR</span>
+                        </span>
+                        <span class="text-mask-wrapper">
+                            <span class="text-mask-item tw-2 text-highlight">STUDIO</span>
+                        </span>
+                        <span class="text-mask-wrapper">
+                            <span class="text-mask-item tw-3">LOCATIONS.</span>
+                        </span>
+                    </h2>
+                    <p class="section-subtitle reveal-item" data-anim="fade-up" data-delay="150">
+                        Visit either of our purpose-built boutique hubs equipped with competition rigs, sprint decks, and zero-gravity recovery lounges.
+                    </p>
+                </div>
+
+                <div class="locations-grid-dual">
+                    <!-- Location 1: Bala Nagar Arena -->
+                    <div class="location-hub-card reveal-item" data-anim="card-reveal" data-delay="100">
+                        <div class="location-media">
+                            <img src="assets/images/quthbullapur-hero.jpg" alt="Bala Nagar Studio Arena" class="location-img">
+                            <div class="cinema-live-status">
+                                <span class="live-rec-dot"></span>
+                                <span>CENTRE 01 // BALA NAGAR</span>
+                            </div>
+                        </div>
+                        <div class="location-body">
+                            <h3 class="f-card-title">Bala Nagar Flagship Arena</h3>
+                            <p class="f-card-desc">
+                                Full Olympic vault with heavy bumper plates, selectorized strength pods, and panoramic turf bays with specialized acoustic flooring.
+                            </p>
+                            <div class="hud-specs-row mb-3">
+                                <span class="hud-spec-pill"><span>📍</span> Bala Nagar Main Rd</span>
+                                <span class="hud-spec-pill"><span>⏱️</span> 06:00 - 22:00</span>
+                                <span class="hud-spec-pill"><span>⚡</span> Hexagonal Glow Rig</span>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <a href="https://wa.me/18005552739?text=Hello%20VISION%20GYM%2C%20I%20would%20like%20to%20visit%20Bala%20Nagar%20Arena" 
+                                   target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm sample-action-btn">
+                                    <span>💬 WhatsApp Tour (Sample)</span>
+                                </a>
+                                <a href="tel:+18005552739" class="btn btn-call btn-sm sample-action-btn">
+                                    <span>📞 Call Desk (Sample)</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location 2: Quthbullapur Centre -->
+                    <div class="location-hub-card reveal-item" data-anim="card-reveal" data-delay="200">
+                        <div class="location-media">
+                            <img src="assets/images/quthbullapur-vfit.jpg" alt="Quthbullapur Boutique Studio" class="location-img">
+                            <div class="cinema-live-status">
+                                <span class="live-rec-dot"></span>
+                                <span>CENTRE 02 // QUTHBULLAPUR</span>
+                            </div>
+                        </div>
+                        <div class="location-body">
+                            <h3 class="f-card-title">Quthbullapur Boutique Centre</h3>
+                            <p class="f-card-desc">
+                                Specialized high-intensity training studio featuring lime green architectural steel beams, commercial treadmill fleet, and magnetic spin deck.
+                            </p>
+                            <div class="hud-specs-row mb-3">
+                                <span class="hud-spec-pill"><span>📍</span> Quthbullapur High St</span>
+                                <span class="hud-spec-pill"><span>⏱️</span> 06:00 - 22:00</span>
+                                <span class="hud-spec-pill"><span>⚡</span> Incline Cardio Deck</span>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <a href="https://wa.me/18005552739?text=Hello%20VISION%20GYM%2C%20I%20would%20like%20to%20visit%20Quthbullapur%20Centre" 
+                                   target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm sample-action-btn">
+                                    <span>💬 WhatsApp Tour (Sample)</span>
+                                </a>
+                                <a href="tel:+18005552739" class="btn btn-call btn-sm sample-action-btn">
+                                    <span>📞 Call Desk (Sample)</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             SECTION 9: CALL TO ACTION FOOTPRINT
+             ========================================================================= -->
+        <section class="cta-section">
+            <div class="section-container">
+                <div class="cta-box reveal-item" data-anim="fade-up">
+                    <span class="cta-tag">45 MINUTES TO TRANSFORM YOUR BODY</span>
+                    <h2 class="cta-title">
+                        EXPERIENCE WORLD-CLASS FACILITIES<br>
+                        AT VISION GYM.
+                    </h2>
+                    <p class="cta-sub">
+                        Discover medical-grade recovery suites, Olympic barbell platforms, and contrast hydrotherapy. Connect with our concierge to learn more.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#exclusive-facilities" class="btn-vision-pill">
+                            EXPLORE RARE FACILITIES
+                        </a>
+                        <a href="https://wa.me/18005552739?text=Hello%20VISION%20GYM%2C%20I%20am%20ready%20for%20my%20first%20class" 
+                           target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg sample-action-btn">
+                            <span>💬 WhatsApp (Sample)</span>
+                        </a>
+                        <a href="tel:+18005552739" class="btn btn-call btn-lg sample-action-btn">
+                            <span>📞 Call Blue (Sample)</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SITE FOOTER -->
+    <footer class="site-footer">
+        <div class="section-container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <a href="#hero" class="brand-logo-theme mb-2">
+                        <span class="logo-bold">VISION</span><span class="logo-dot">.</span><span class="logo-light">GYM</span>
+                    </a>
+                    <p class="footer-desc">
+                        A no-contract high intensity boutique studio. Highly effective cardio and strength sessions designed for busy, ambitious lifestyles.
+                    </p>
+                    <div class="footer-actions-direct">
+                        <a href="tel:+18005552739" class="footer-contact-pill btn-call sample-action-btn">
+                            <span>📞 Call Desk (Sample)</span>
+                        </a>
+                        <a href="https://wa.me/18005552739" class="footer-contact-pill whatsapp-pill sample-action-btn">
+                            <span>💬 WhatsApp (Sample)</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="f-col-title">The Studio</h4>
+                    <ul class="f-links">
+                        <li><a href="#facilities">Technogym Skillmills</a></li>
+                        <li><a href="#facilities">Eleiko Strength Vault</a></li>
+                        <li><a href="#facilities">Cold Plunge Hydrotherapy</a></li>
+                        <li><a href="#facilities">Dry Cedar Sauna</a></li>
+                        <li><a href="#locations">Boutique Locations</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="f-col-title">Signature Disciplines</h4>
+                    <ul class="f-links">
+                        <li><a href="#facilities">Vision 45 High-Intensity</a></li>
+                        <li><a href="#facilities">Olympic Strength Vault</a></li>
+                        <li><a href="#facilities">Hyrox Endurance Arena</a></li>
+                        <li><a href="#performance">High-Intensity Engine</a></li>
+                        <li><a href="#locations">Bala Nagar & Quthbullapur</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="f-col-title">Studio Hubs</h4>
+                    <p class="f-contact-item">📍 <strong>Bala Nagar:</strong> Arena Main Road</p>
+                    <p class="f-contact-item">📍 <strong>Quthbullapur:</strong> High St Boutique</p>
+                    <p class="f-contact-item">⏱️ Mon - Fri: 06:00 - 22:00</p>
+                    <p class="f-contact-item">⏱️ Sat - Sun: 07:00 - 20:00</p>
+                    <p class="f-contact-item">📞 <strong>Direct Call:</strong> +1 (800) 555-VISION</p>
+                    <p class="f-contact-item">💬 <strong>WhatsApp:</strong> +1 (800) 555-VISION</p>
+                    <p class="f-contact-item">✉️ hello@visiongym.fit</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 VISION GYM. All Rights Reserved. Engineered for Peak High-Intensity Performance.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">No-Contract Terms</a>
+                    <a href="#">Studio Safety Standards</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =========================================================================
+         VIP CLASS BOOKING MODAL
+         ========================================================================= -->
+    <div class="modal-overlay" id="vipModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Close Modal">✕</button>
+            
+            <div class="modal-content" id="modalFormContainer">
+                <div class="modal-badge">
+                    <span class="live-dot"></span> COMPLIMENTARY 45-MIN TRIAL PASS
+                </div>
+                <h3 class="modal-title">JOIN VISION GYM</h3>
+                <p class="modal-subtitle">
+                    Enter your details below to claim your complimentary trial class pass and instant WhatsApp confirmation.
+                </p>
+
+                <form id="vipPassForm" class="vip-form" onsubmit="handleVipSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="vipName">Full Name *</label>
+                            <input type="text" id="vipName" class="form-control" placeholder="Alex Morgan" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="vipPhone">Phone Number *</label>
+                            <input type="tel" id="vipPhone" class="form-control" placeholder="+1 (555) 000-0000" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="vipEmail">Email Address *</label>
+                            <input type="email" id="vipEmail" class="form-control" placeholder="alex@athlete.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="vipGoal">Primary Training Focus</label>
+                            <select id="vipGoal" class="form-control">
+                                <option value="45-Min High Intensity & Fat Loss">45-Min Cardio & Fat Loss</option>
+                                <option value="Strength & Muscle Hypertrophy">Strength & Heavy Barbell</option>
+                                <option value="Hyrox & Functional Endurance">Hyrox & Functional Engine</option>
+                                <option value="Body Recomposition & Tone">Body Recomposition & Tone</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="vipTime">Preferred Class Time Slot</label>
+                        <select id="vipTime" class="form-control">
+                            <option value="Morning Wake-up (06:30 - 07:15)">Morning Wake-up (06:30 - 07:15)</option>
+                            <option value="Midday Express (12:30 - 13:15)">Midday Express (12:30 - 13:15)</option>
+                            <option value="Evening Prime (17:30 - 18:15)">Evening Prime (17:30 - 18:15)</option>
+                            <option value="Night Burn (19:00 - 19:45)">Night Burn (19:00 - 19:45)</option>
+                        </select>
+                    </div>
+
+                    <input type="hidden" id="passContext" value="Vision Class Booking">
+
+                    <button type="submit" class="btn-vision-pill btn-block mt-3" id="submitPassBtn">
+                        CONFIRM MY COMPLIMENTARY TRIAL CLASS
+                    </button>
+                    <p class="form-guarantee">🔒 Instant Confirmation Sent via SMS & WhatsApp.</p>
+                </form>
+            </div>
+
+            <!-- MODAL SUCCESS STATE (CELEBRATORY WITH ANIMATION) -->
+            <div class="modal-success-state" id="modalSuccessState" style="display: none;">
+                <div class="success-icon-wrap">
+                    <span class="celebration-burst">⚡</span>
+                </div>
+                <h3 class="success-title">YOU'RE ON THE LIST.</h3>
+                <p class="success-sub">
+                    Welcome, <span id="confirmedName" class="text-neon">Athlete</span>. Your complimentary class pass at VISION GYM is confirmed.
+                </p>
+                
+                <div class="pass-ticket-card">
+                    <div class="ticket-header">
+                        <span class="t-brand">VISION GYM // TRIAL PASS</span>
+                        <span class="t-code" id="passCode">#VSN-8450</span>
+                    </div>
+                    <div class="ticket-body">
+                        <div class="t-row"><span class="t-k">Focus:</span><span class="t-v" id="confirmedGoal">45-Min Cardio & Fat Loss</span></div>
+                        <div class="t-row"><span class="t-k">Class Slot:</span><span class="t-v" id="confirmedTime">Morning Wake-up</span></div>
+                        <div class="t-row"><span class="t-k">Locker Assigned:</span><span class="t-v text-neon">V-22 (Keyless RFID)</span></div>
+                    </div>
+                </div>
+
+                <div class="ticket-actions">
+                    <a href="https://wa.me/18005552739?text=Hello%20VISION%20GYM%2C%20I%20have%20registered%20for%20my%20trial%20class" 
+                       target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-block mb-2">
+                        Send Pass to my WhatsApp
+                    </a>
+                    <button class="btn btn-ghost btn-block" onclick="closeVipModal()">
+                        Done & Return to Studio
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONFETTI CANVAS FOR SUCCESS CELEBRATION -->
+    <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+
+    
+    <!-- MOBILE QUICK-ACTION DOCK (STICKY BOTTOM DOCK FOR MOBILE APP EXPERIENCE) -->
+    <aside class="mobile-action-dock" id="mobileActionDock" aria-label="Quick Mobile Actions">
+        <a href="tel:+18005552739" class="dock-action-btn dock-btn-call sample-action-btn" aria-label="Call Vision Gym Direct">
+            <span class="dock-icon">📞</span>
+            <span class="dock-text">Call (Sample)</span>
+        </a>
+        <a href="https://wa.me/18005552739" class="dock-action-btn dock-btn-whatsapp sample-action-btn" aria-label="WhatsApp Vision Gym Concierge">
+            <span class="dock-icon">💬</span>
+            <span class="dock-text">WhatsApp</span>
+        </a>
+        <a href="#exclusive-facilities" class="dock-action-btn dock-btn-trial" aria-label="Exclusive Facilities">
+            <span class="dock-icon">✨</span>
+            <span class="dock-text">Facilities</span>
+        </a>
+    </aside>
+
+    <!-- SAMPLE PREVIEW DEMO NOTIFICATION TOAST -->
+    <div class="sample-notice-toast" id="sampleNoticeToast" role="alert" aria-live="assertive">
+        <div class="toast-indicator">
+            <span class="toast-pulse-dot"></span>
+        </div>
+        <div class="toast-content">
+            <div class="toast-badge">SAMPLE DEMO PREVIEW</div>
+            <div class="toast-title" id="sampleToastTitle">Calling & WhatsApp Disabled</div>
+            <div class="toast-sub">This website is in sample demonstration mode. Phone dialing and WhatsApp routing are currently simulated.</div>
+        </div>
+        <button class="toast-close-btn" onclick="hideSampleToast()" aria-label="Dismiss Notification">✕</button>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/animations.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
